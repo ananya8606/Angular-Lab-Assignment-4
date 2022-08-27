@@ -1,0 +1,40 @@
+<table>
+  <tr><th>Book ID</th><th>Book Title</th><th>Book Author</th><th>Book Year of Publish</th></tr>
+  <tr >
+   <td><input type="text" name="ID"  placeholder="Id" [(ngModel)]="searchText" (input)="getid()"></td>
+  <td><input type="text" name="Title"  placeholder="Title" [(ngModel)]="searchText1" (input)="gettitle()"></td> 
+  <td><input type="text" name="Author"  placeholder="Author" [(ngModel)]="searchText2" (input)="getauthor()"></td>
+  <td><input type="text" name="Year"  placeholder="Year" [(ngModel)]="searchText3" (input)="getyear()"></td></tr> 
+  <ng-container *ngIf="showid">
+<tr *ngFor="let book of books | filter: {id: searchText}; let i=index;">
+    <td>{{book.id}}</td>
+    <td>{{book.title}}</td>
+    <td>{{book.author}}</td>
+    <td>{{book.year}}</td>
+  </tr>
+  </ng-container>
+  <ng-container *ngIf="showtitle">
+    <tr *ngFor="let book of books | filter: {title:searchText1}; let i=index;">
+        <td>{{book.id}}</td>
+        <td>{{book.title}}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.year}}</td>
+      </tr>
+      </ng-container>
+      <ng-container *ngIf="showauthor">
+        <tr *ngFor="let book of books | filter: {author: searchText2}; let i=index;">
+            <td>{{book.id}}</td>
+            <td>{{book.title}}</td>
+            <td>{{book.author}}</td>
+            <td>{{book.year}}</td>
+          </tr>
+          </ng-container>
+          <ng-container *ngIf="showyear">
+            <tr *ngFor="let book of books | filter: {year:searchText3}; let i=index;">
+                <td>{{book.id}}</td>
+                <td>{{book.title}}</td>
+                <td>{{book.author}}</td>
+                <td>{{book.year}}</td>
+              </tr>
+              </ng-container>
+</table>
