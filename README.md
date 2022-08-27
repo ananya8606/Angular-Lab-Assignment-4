@@ -1,5 +1,7 @@
 # LabAssignmentAngular4
 
+https://user-images.githubusercontent.com/52853286/187019290-ea96d46a-ecd3-495b-af24-5ca040cedd2c.mp4
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
 
 ## Development server
